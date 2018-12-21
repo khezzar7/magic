@@ -1,0 +1,17 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+  <h1>Magic-Card</h1>
+  <article *ngFor="let magic of magics; let i =index">
+
+        <img src="http://localhost:8000/upload/cards/{{magic.image}}" alt="">
+        <h2>{{magic.title}}</h2>
+        <p>Description:{{magic.body}}</p>
+        <span>Edition{{magic.edition}}</span>
+        <p>Rareté:{{magic.rarity}}</p>
+        <h4>Artiste:{{magic.artist}}</h4>
+
+
+  </article>
+</div>
+
+<router-outlet></router-outlet>

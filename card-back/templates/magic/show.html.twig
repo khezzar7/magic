@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Magic{% endblock %}
+
+{% block body %}
+    <h1>Magic</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ magic.id }}</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td><image src="{{magic.image}}"></td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ magic.title }}</td>
+            </tr>
+            <tr>
+                <th>Body</th>
+                <td>{{ magic.body }}</td>
+            </tr>
+            <tr>
+                <th>Edition</th>
+                <td>{{ magic.edition }}</td>
+            </tr>
+            <tr>
+                <th>Rarity</th>
+                <td>{{ magic.rarity }}</td>
+            </tr>
+            <tr>
+                <th>Artist</th>
+                <td>{{ magic.artist }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('magic_index') }}">back to list</a>
+
+    <a href="{{ path('magic_edit', {'id': magic.id}) }}">edit</a>
+
+    {{ include('magic/_delete_form.html.twig') }}
+{% endblock %}

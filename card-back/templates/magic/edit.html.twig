@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Magic{% endblock %}
+
+{% block body %}
+    <h1>Edit Magic</h1>
+
+    {{ include('magic/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('magic_index') }}">back to list</a>
+
+    {{ include('magic/_delete_form.html.twig') }}
+{% endblock %}
